@@ -330,17 +330,41 @@
                         <i class="bi bi-lightbulb text-warning me-2"></i>Rotina Típica
                     </h5>
                     <p class="card-text mb-3">
-                        Um dia típico pode começar com uma daily standup onde você compartilha o que fez, 
-                        o que vai fazer e se há algum impedimento. Em seguida, você pode trabalhar em uma 
-                        nova feature, revisar um pull request, participar de uma discussão técnica sobre 
-                        arquitetura, investigar um bug reportado, escrever testes ou fazer deploy de uma 
-                        nova versão.
+                        Um dia típico começa às 9h com uma daily standup de 15 minutos, onde você compartilha o que implementou 
+                        no dia anterior (por exemplo, "finalizei o endpoint de autenticação JWT"), o que vai fazer hoje 
+                        ("vou criar a API de relatórios e escrever os testes unitários") e se há algum bloqueio 
+                        ("preciso de acesso ao banco de staging para testar a query otimizada").
+                    </p>
+                    <p class="card-text mb-3">
+                        Após a daily, você pode começar trabalhando em uma nova feature: criar um novo endpoint REST para 
+                        gerenciar pedidos. Primeiro, você modela a entidade no banco de dados, cria a migration, implementa 
+                        o repositório com métodos de CRUD, desenvolve o service com a lógica de negócio (validações, cálculos, 
+                        regras específicas), cria o controller com os endpoints GET, POST, PUT e DELETE, escreve testes unitários 
+                        para cada camada e testes de integração para validar o fluxo completo. Tudo isso usando TDD, garantindo 
+                        que cada teste passe antes de seguir para o próximo.
+                    </p>
+                    <p class="card-text mb-3">
+                        No meio da manhã, você recebe uma notificação de um bug em produção: uma query está demorando 8 segundos 
+                        para retornar. Você acessa o dashboard de monitoramento, identifica o endpoint problemático, analisa os 
+                        logs do banco de dados, descobre que falta um índice na tabela de usuários e que a query está fazendo 
+                        um full table scan. Você cria o índice apropriado, testa localmente, verifica que o tempo caiu para 200ms, 
+                        cria uma migration e faz o deploy em staging para validação antes de ir para produção.
+                    </p>
+                    <p class="card-text mb-3">
+                        À tarde, você revisa um pull request de um colega júnior que implementou um endpoint de busca. Você verifica 
+                        se o código segue os padrões do projeto, se há tratamento de erros adequado, se as validações estão corretas, 
+                        se os testes cobrem os casos de borda, se a documentação da API está atualizada e se não há vulnerabilidades 
+                        de segurança (como SQL injection ou falta de sanitização de inputs). Você faz comentários construtivos no 
+                        código, sugere melhorias e aprova após as correções.
                     </p>
                     <p class="card-text mb-0">
-                        O trabalho é variado e desafiador, exigindo não apenas conhecimento técnico, mas também 
-                        habilidades de resolução de problemas, comunicação e trabalho em equipe. A constante 
-                        evolução tecnológica também exige que você esteja sempre aprendendo e se atualizando 
-                        com novas ferramentas, frameworks e práticas do mercado.
+                        No final do dia, você participa de uma discussão técnica sobre arquitetura: o time está debatendo se deve 
+                        migrar de uma API monolítica para microsserviços. Você pesquisa sobre os prós e contras, analisa o volume 
+                        de requisições atual, discute estratégias de decomposição, avalia ferramentas de orquestração e apresenta 
+                        sua opinião fundamentada. Antes de encerrar, você atualiza a documentação da API que você criou, commita 
+                        suas alterações, faz push e prepara um resumo do que foi feito para a próxima daily. O trabalho é variado 
+                        e desafiador, exigindo não apenas conhecimento técnico profundo, mas também habilidades de resolução de 
+                        problemas complexos, comunicação clara e trabalho colaborativo em equipe.
                     </p>
                 </div>
             </div>
