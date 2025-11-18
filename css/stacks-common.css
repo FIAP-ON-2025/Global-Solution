@@ -1,28 +1,25 @@
-/* Define a fonte Inter como padrão do corpo */
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bs-body-bg);
 }
 
-/* Imagem de destaque no topo */
 .header-image {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    border-radius: 0 0 1.5rem 1.5rem; /* Cantos arredondados apenas embaixo */
+    border-radius: 0 0 1.5rem 1.5rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
-/* Transição suave para os cards */
 .card {
     transition: all 0.3s ease-in-out;
-    border-radius: 1rem; /* Cantos mais arredondados */
+    border-radius: 1rem; 
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilo de hover para os cards de curso */
+
 .card-course:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -30,11 +27,10 @@ body {
 
 .card-course .card-img-top {
     border-radius: 1rem 1rem 0 0;
-    aspect-ratio: 16 / 9; /* Proporção da imagem */
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
-/* Botão de Home (topo direito) */
 .home-button {
     position: fixed;
     top: 20px;
@@ -57,7 +53,6 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Botão de toggle dark mode */
 .theme-toggle {
     position: fixed;
     bottom: 20px;
@@ -72,14 +67,12 @@ body {
     justify-content: center;
 }
 
-/* Ícones para o toggle (mostra um ou outro) */
 .theme-toggle .bi-sun-fill { display: none; }
 .theme-toggle .bi-moon-fill { display: block; }
 
-/* Estilo do toggle em modo escuro */
 [data-bs-theme="dark"] .theme-toggle .bi-sun-fill { display: block; }
 [data-bs-theme="dark"] .theme-toggle .bi-moon-fill { display: none; }
 [data-bs-theme="dark"] .header-image {
-     opacity: 0.85; /* Imagem fica menos brilhante no modo escuro */
+     opacity: 0.85;
 }
 
