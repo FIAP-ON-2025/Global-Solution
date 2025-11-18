@@ -12,7 +12,7 @@
         xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/home.css">
 
-    
+
 </head>
 
 <body>
@@ -36,8 +36,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#secao4"> Diagnóstico (Quiz)</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#secao5"> Trilhas de Desenvolvimento</a>
+                </li>
+
+
             </ul>
-            <!-- Suas alterações removeram as "Seções de Fases Adicionais" -->
         </nav>
 
         <!-- CONTEÚDO PRINCIPAL -->
@@ -65,7 +69,7 @@
                     força de trabalho, focando no aproveitamento inteligente de talentos e na criação de um caminho
                     claro para o "trabalho decente" na economia digital.</p>
 
-                <h2 id="secao3" class="titulo-2">Estrutura da Solução: O Ciclo de Redirecionamento</h2>
+                <h2 id="secao3" class="titulo-2">Estrutura da Solução: O ciclo de redirecionamento</h2>
 
                 <p class="subtexto">A solução se estrutura em três pilares principais, pensados para profissionais já
                     inseridos no mercado (e aqueles em busca de recolocação):</p>
@@ -102,8 +106,6 @@
                     <p id="quiz-message" class="mt-3 text-muted"></p>
                 </div>
 
-
-
                 <p id="secao5"><strong>B. Redirecionamento Personalizado e Capacitação Direcionada</strong></p>
                 <p>Com base no diagnóstico, o profissional recebe um plano de ação altamente personalizado:</p>
                 <ul>
@@ -126,13 +128,25 @@
                         estratégia de retenção de talentos.</li>
                 </ul>
 
+                <!-- NOVO CONTAINER PARA OS BOTÕES DE STACK (FRONT-END e BACK-END) -->
+                <div class="text-center stack-buttons-container">
+                    <h3 class="mb-4 titulo-2">Escolha sua Trilha de Desenvolvimento</h3>
+                    <!-- Botão Front-End -->
+                    <a href="./pages/front-end.html" class="btn-stack btn-frontend">
+                        <i class="fas fa-laptop-code me-2"></i> Front-End
+                    </a>
+                    <!-- Botão Back-End -->
+                    <a href="./pages/back-end.html" class="btn-stack btn-backend">
+                        <i class="fas fa-server me-2"></i> Back-End
+                    </a>
+                </div>
 
             </div>
 
         </div>
     </div>
 
-    <!-- Incluindo Font Awesome para o ícone no botão (melhora o design) -->
+    <!-- Incluindo Font Awesome para os ícones -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- Incluindo Bootstrap 5 JS para funcionalidades (opcional, mas recomendado) -->
@@ -149,7 +163,7 @@
                 '<span class="text-success fw-bold">Quiz iniciado! Você será redirecionado em breve.</span>';
 
             // Substitua esta linha por um redirecionamento real:
-            // window.location.href = 'link-do-seu-quiz.html'; 
+            // window.location.href = 'link-do-seu-quiz.html';
 
             // Exemplo de como usar o JS para desabilitar o botão após o clique:
             setTimeout(() => {
@@ -158,11 +172,6 @@
             }, 2000);
         }
     </script>
-
-    <a href="./pages/back-end.html">Back-End</a>
-    <br>
-    <a href="./pages/front-end.html">Front-End</a>
-
 
 </body>
 
