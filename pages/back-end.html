@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Back-End</title>
+    
+    <!-- Link do CSS do Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS comum do projeto -->
+    <link rel="stylesheet" href="../css/stacks-common.css">
+    
+    <!-- Ícones do Bootstrap (para o toggle de tema) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- Botão de Home (topo direito) -->
+    <a href="../index.html" class="btn btn-primary home-button" title="Voltar para Home">
+        <i class="bi bi-house-fill"></i>
+    </a>
+
+    <!-- 1. Imagem Relacionada ao Conteúdo -->
+    <header>
+        <img src="../images/back-end-header.jpg" 
+             class="header-image" 
+             alt="Banner com código representando o Back-End">
+    </header>
+
+    <main class="container my-5">
+
+        <!-- 2. Explicação do que a Stack faz -->
+        <section id="explicacao" class="mb-5">
+            <h1 class="display-4 fw-bold mb-3">O que é Back-End?</h1>
+            <p class="lead text-muted">
+                O "Back-End" é a parte de um sistema ou aplicação que roda "por trás dos panos", 
+                geralmente em um servidor. É o motor que faz tudo funcionar, mas que o usuário final 
+                não vê diretamente.
+            </p>
+            <p>
+                Enquanto o Front-End cuida da interface gráfica (o que você vê e clica), o Back-End
+                é responsável pela lógica de negócios, pelo processamento de dados, pela comunicação
+                com o banco de dados e pela segurança. Quando você faz login em um site, envia um formulário
+                ou faz uma compra, é o Back-End que processa essa solicitação, verifica suas credenciais,
+                salva as informações e retorna uma resposta para o Front-End.
+            </p>
+            <p>
+                O desenvolvimento Back-End envolve trabalhar com servidores, bancos de dados, APIs (Application Programming Interfaces),
+                autenticação, autorização, segurança de dados, otimização de performance e muito mais. 
+                É uma área fundamental para qualquer aplicação web ou mobile, garantindo que os dados sejam 
+                processados corretamente, armazenados com segurança e entregues de forma eficiente aos usuários.
+            </p>
+            <p>
+                Profissionais de Back-End trabalham com diversas linguagens de programação como Java, Python, 
+                PHP, C#, Node.js, entre outras, além de frameworks modernos que facilitam o desenvolvimento 
+                de aplicações robustas e escaláveis. Eles também precisam entender sobre arquitetura de software, 
+                padrões de design, testes automatizados e práticas de DevOps para garantir a qualidade e 
+                disponibilidade dos sistemas.
+            </p>
+        </section>
+
+        <!-- 3. Exemplos de Responsabilidades -->
+        <section id="responsabilidades" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Principais Responsabilidades</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-database-check h2 text-primary me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Bancos de Dados</h5>
+                                <p class="card-text">Modelar, criar, consultar e gerenciar bancos de dados (SQL ou NoSQL) para armazenar e recuperar informações de forma eficiente e segura. Isso inclui otimização de queries, criação de índices, normalização de dados, backup e recuperação, além de trabalhar com ORMs (Object-Relational Mapping) para facilitar a interação com o banco de dados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-braces-asterisk h2 text-success me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">APIs e Lógica de Negócios</h5>
+                                <p class="card-text">Construir e manter APIs (Interfaces de Programação de Aplicações) que servem como ponte de comunicação entre o Front-End e o servidor, aplicando as regras de negócio. Desenvolver endpoints RESTful ou GraphQL, implementar validações, tratamento de erros, versionamento de APIs e documentação técnica para facilitar a integração com outros sistemas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-shield-lock h2 text-danger me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Segurança e Autenticação</h5>
+                                <p class="card-text">Implementar sistemas de login, gerenciar permissões de usuários e proteger a aplicação contra ataques comuns (injeção de SQL, XSS, CSRF, etc.). Trabalhar com tokens JWT, OAuth, criptografia de dados sensíveis, HTTPS, rate limiting e outras práticas de segurança para garantir a integridade e confidencialidade das informações.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-hdd-network h2 text-warning me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Gerenciamento de Servidores</h5>
+                                <p class="card-text">Configurar o ambiente onde a aplicação irá rodar (servidor), garantindo performance, escalabilidade e monitoramento (DevOps). Isso inclui deploy automatizado, uso de containers (Docker), orquestração (Kubernetes), CI/CD, monitoramento de logs, métricas de performance e capacidade de escalar horizontalmente conforme a demanda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3.1. Carreira em Back-End -->
+        <section id="carreira" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Carreira em Back-End</h2>
+            <p class="lead mb-4">
+                O desenvolvimento Back-End oferece uma carreira promissora e em constante crescimento, 
+                com alta demanda no mercado de trabalho e excelentes oportunidades de evolução profissional.
+            </p>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">
+                                <i class="bi bi-graph-up-arrow me-2"></i>Mercado de Trabalho
+                            </h5>
+                            <p class="card-text">
+                                O mercado para desenvolvedores Back-End está em constante expansão. Com a digitalização 
+                                das empresas e o crescimento de aplicações web e mobile, a demanda por profissionais 
+                                qualificados só aumenta. Empresas de todos os tamanhos, desde startups até grandes corporações, 
+                                buscam desenvolvedores Back-End para construir e manter seus sistemas.
+                            </p>
+                            <p class="card-text">
+                                A área oferece salários competitivos, com oportunidades de trabalho remoto, flexibilidade 
+                                de horários e possibilidade de atuar em projetos diversos e desafiadores. Profissionais 
+                                experientes podem alcançar posições de liderança técnica, arquitetura de software ou 
+                                até mesmo empreender criando suas próprias soluções.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-success">
+                                <i class="bi bi-ladder me-2"></i>Evolução Profissional
+                            </h5>
+                            <p class="card-text">
+                                A carreira em Back-End possui uma trajetória clara de crescimento: começando como 
+                                <strong>Desenvolvedor Júnior</strong>, você trabalha em tarefas mais simples e aprende 
+                                as bases. Como <strong>Desenvolvedor Pleno</strong>, assume responsabilidades maiores, 
+                                participa de decisões técnicas e mentora juniores.
+                            </p>
+                            <p class="card-text">
+                                Ao evoluir para <strong>Desenvolvedor Sênior</strong>, você se torna referência técnica, 
+                                define arquiteturas, lidera projetos complexos e influencia decisões estratégicas. 
+                                A partir daí, pode seguir para <strong>Arquiteto de Software</strong>, <strong>Tech Lead</strong>, 
+                                <strong>Engineering Manager</strong> ou especializar-se em áreas como DevOps, Cloud Computing 
+                                ou Segurança da Informação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-3">
+                        <i class="bi bi-star-fill text-warning me-2"></i>Habilidades Essenciais
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Linguagens de Programação:</strong> Domínio de pelo menos uma linguagem (Java, Python, PHP, C#, Node.js, etc.)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Frameworks:</strong> Conhecimento de frameworks modernos (Spring, Laravel, Django, Express, etc.)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Bancos de Dados:</strong> SQL e NoSQL, modelagem de dados, otimização</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>APIs REST/GraphQL:</strong> Criação e consumo de APIs</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Git e Versionamento:</strong> Controle de versão e colaboração</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Testes:</strong> Testes unitários, integração e TDD</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>DevOps:</strong> Docker, CI/CD, cloud (AWS, Azure, GCP)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Segurança:</strong> Boas práticas de segurança e proteção de dados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3.2. Dia a Dia de um Desenvolvedor Back-End -->
+        <section id="dia-a-dia" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Dia a Dia de um Desenvolvedor Back-End</h2>
+            <p class="lead mb-4">
+                O trabalho de um desenvolvedor Back-End é dinâmico e envolve diversas atividades que vão 
+                além de apenas escrever código. Conheça um pouco do que é o dia a dia dessa profissão.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-code-slash text-primary me-2"></i>Desenvolvimento
+                            </h5>
+                            <p class="card-text">
+                                Grande parte do tempo é dedicada ao desenvolvimento de novas funcionalidades, 
+                                correção de bugs e refatoração de código. Isso envolve escrever código limpo 
+                                e bem estruturado, seguir padrões de design, aplicar princípios SOLID e garantir 
+                                que o código seja testável e manutenível.
+                            </p>
+                            <p class="card-text">
+                                Você trabalha criando endpoints de API, implementando regras de negócio, 
+                                integrando com bancos de dados, desenvolvendo serviços e garantindo que tudo 
+                                funcione de forma eficiente e segura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-people text-success me-2"></i>Colaboração
+                            </h5>
+                            <p class="card-text">
+                                O trabalho em equipe é fundamental. Você participa de reuniões de planejamento, 
+                                revisa código de outros desenvolvedores (code review), discute soluções técnicas 
+                                com o time e colabora com desenvolvedores Front-End, designers, product managers 
+                                e outros stakeholders.
+                            </p>
+                            <p class="card-text">
+                                Comunicação clara é essencial para alinhar expectativas, explicar decisões técnicas 
+                                e garantir que todos estejam na mesma página. Você também pode participar de 
+                                pair programming e sessões de mentoria.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-bug text-danger me-2"></i>Debugging e Resolução de Problemas
+                            </h5>
+                            <p class="card-text">
+                                Uma parte significativa do trabalho envolve identificar e corrigir problemas. 
+                                Isso pode incluir investigar erros em produção, analisar logs, debugar código, 
+                                otimizar queries lentas, resolver problemas de performance e garantir que 
+                                o sistema esteja funcionando corretamente.
+                            </p>
+                            <p class="card-text">
+                                Você usa ferramentas de monitoramento, análise de logs e profiling para 
+                                identificar gargalos e melhorar a performance da aplicação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-file-earmark-text text-info me-2"></i>Documentação
+                            </h5>
+                            <p class="card-text">
+                                Documentar o código, APIs e processos é crucial para manter a qualidade 
+                                e facilitar a manutenção. Você escreve documentação técnica, comentários 
+                                no código, READMEs, especificações de API e guias para outros desenvolvedores.
+                            </p>
+                            <p class="card-text">
+                                Boa documentação economiza tempo no futuro e ajuda novos membros da equipe 
+                                a entenderem o sistema rapidamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-check2-square text-warning me-2"></i>Testes
+                            </h5>
+                            <p class="card-text">
+                                Escrever e manter testes é parte essencial do trabalho. Você desenvolve testes 
+                                unitários, de integração e end-to-end para garantir que o código funcione 
+                                corretamente e não quebre funcionalidades existentes.
+                            </p>
+                            <p class="card-text">
+                                Testes automatizados ajudam a detectar bugs cedo, facilitam refatorações 
+                                e dão confiança para fazer mudanças no código. Você também pode trabalhar 
+                                com TDD (Test-Driven Development) e garantir alta cobertura de testes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-cloud-upload text-primary me-2"></i>Deploy e DevOps
+                            </h5>
+                            <p class="card-text">
+                                Você participa do processo de deploy, configurando ambientes, trabalhando com 
+                                CI/CD, usando containers (Docker), orquestração (Kubernetes) e garantindo que 
+                                as aplicações sejam entregues de forma confiável e automatizada.
+                            </p>
+                            <p class="card-text">
+                                Monitoramento de aplicações em produção, análise de métricas, configuração 
+                                de alertas e resolução de incidentes também fazem parte das responsabilidades, 
+                                especialmente em times menores ou em posições mais sênior.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-3">
+                        <i class="bi bi-lightbulb text-warning me-2"></i>Rotina Típica
+                    </h5>
+                    <p class="card-text mb-3">
+                        Um dia típico pode começar com uma daily standup onde você compartilha o que fez, 
+                        o que vai fazer e se há algum impedimento. Em seguida, você pode trabalhar em uma 
+                        nova feature, revisar um pull request, participar de uma discussão técnica sobre 
+                        arquitetura, investigar um bug reportado, escrever testes ou fazer deploy de uma 
+                        nova versão.
+                    </p>
+                    <p class="card-text mb-0">
+                        O trabalho é variado e desafiador, exigindo não apenas conhecimento técnico, mas também 
+                        habilidades de resolução de problemas, comunicação e trabalho em equipe. A constante 
+                        evolução tecnológica também exige que você esteja sempre aprendendo e se atualizando 
+                        com novas ferramentas, frameworks e práticas do mercado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Seção de Linguagens -->
+        <section id="linguagens" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Linguagens</h2>
+            <p class="text-muted mb-4">
+                Formações completas em linguagens de programação para desenvolvimento Back-End.
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/php.jpg" 
+                             class="card-img-top" 
+                             alt="Preview do curso de PHP"
+                             onerror="this.src='https://placehold.co/600x400/6c757d/ffffff?text=PHP';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Formação PHP e Laravel</h5>
+                            <p class="card-text text-muted small flex-grow-1">Aprenda Back-End com PHP, do pensamento computacional à arquitetura avançada de sistemas web. Uma jornada completa, com projetos práticos, desafios reais e aplicações diretas. Construa um portfólio sólido e prepare-se para vagas valorizadas no mercado.</p>
+                            <a href="https://cursos.alura.com.br/career/path/desenvolvimento-backend-php" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/java-spring.png" 
+                             class="card-img-top" 
+                             alt="Preview do curso de Java e Spring"
+                             onerror="this.src='https://placehold.co/600x400/6c757d/ffffff?text=Java+Spring';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Formação Java e Spring Boot</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine o desenvolvimento Back-End com Java, da base da programação à arquitetura avançada de microsserviços. Uma jornada completa, com desafios reais, projetos práticos e aplicações diretas que refletem o dia a dia das empresas. Construa um portfólio sólido e prepare-se para atuar em qualquer nível da carreira, alinhado às demandas do mercado.</p>
+                            <a href="https://cursos.alura.com.br/career/path/desenvolvimento-backend-java" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/dotnet.jpg" 
+                             class="card-img-top" 
+                             alt="Preview do curso de .NET"
+                             onerror="this.src='https://placehold.co/600x400/6c757d/ffffff?text=.NET';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Formação .NET</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine o desenvolvimento Back-End com .NET e C#. Aprenda programação, boas práticas, testes automatizados, DevOps, segurança e soluções em nuvem, evoluindo até se tornar referência em arquitetura e liderança de times em ambientes escaláveis e distribuídos.</p>
+                            <a href="https://cursos.alura.com.br/career/path/desenvolvimento-backend-net" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Seção de Tecnologias -->
+        <section id="tecnologias" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Tecnologias</h2>
+            <p class="text-muted mb-4">
+                Ferramentas e tecnologias essenciais para desenvolvimento e DevOps Back-End.
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/docker.jpg" 
+                             class="card-img-top" 
+                             alt="Preview do curso de Docker"
+                             onerror="this.src='https://placehold.co/600x400/6c757d/ffffff?text=Docker';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Docker</h5>
+                            <p class="card-text text-muted small flex-grow-1">Aprenda a criar, gerenciar e orquestrar containers Docker. Domine uma das tecnologias mais importantes para desenvolvimento e deploy de aplicações Back-End modernas. Com Docker, você pode empacotar aplicações com todas as suas dependências, garantindo que funcionem da mesma forma em qualquer ambiente, desde desenvolvimento até produção. Aprenda sobre Dockerfile, Docker Compose, volumes, redes e boas práticas de containerização.</p>
+                            <a href="https://cursos.alura.com.br/course/docker-criando-gerenciando-containers" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/git-github.png" 
+                             class="card-img-top" 
+                             alt="Preview do curso de Git"
+                             onerror="this.src='https://placehold.co/600x400/6c757d/ffffff?text=Git';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Git e GitHub</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine o controle de versão com Git e GitHub. Aprenda comandos essenciais, workflows, branches, merges e colaboração em equipe. Git é fundamental para qualquer desenvolvedor Back-End, permitindo rastrear mudanças no código, trabalhar em equipe de forma eficiente, reverter alterações quando necessário e manter um histórico completo do projeto. Aprenda sobre pull requests, code review, merge conflicts, rebase e as melhores práticas de versionamento.</p>
+                            <a href="https://cursos.alura.com.br/course/git-github-compartilhando-colaborando-projetos" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/sql.jpg" 
+                             class="card-img-top" 
+                             alt="Preview do curso de SQL"
+                             onerror="this.src='https://placehold.co/600x400/6c757d/ffffff?text=Git';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">SQL</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine o SQL, a linguagem de consulta de bancos de dados relacionais. Aprenda a criar, consultar, atualizar e excluir dados de forma eficiente e segura. Explore tabelas, joins, subqueries, funções agregadas e técnicas de otimização para consultas complexas. Prepare-se para lidar com grandes volumes de dados e tomar decisões estratégicas sobre a estrutura do banco de dados.</p>
+                            <a href="https://cursos.alura.com.br/formacao-conhecendo-sql" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-muted py-4 border-top">
+        <p class="mb-0">&copy; 2025 Guia de Stacks.</p>
+    </footer>
+
+    <!-- Botão de Toggle Dark/Light Mode -->
+    <button class="btn btn-primary theme-toggle" id="theme-toggle-button" title="Alternar tema">
+        <i class="bi bi-moon-fill"></i>
+        <i class="bi bi-sun-fill"></i>
+    </button>
+
+    <!-- Link do JS do Bootstrap 5 (Bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- JavaScript comum do projeto -->
+    <script src="../js/stacks-common.js"></script>
+</body>
+</html>
