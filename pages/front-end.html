@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Front-End</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/stacks-common.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <a href="../index.html" class="btn btn-primary home-button" title="Voltar para Home">
+        <i class="bi bi-house-fill"></i>
+    </a>
+
+    <header>
+        <img src="../images/front-end-header.webp" 
+             class="header-image" 
+             alt="Banner com código representando o Front-End"
+             onerror="this.src='https://placehold.co/1200x350/4f46e5/ffffff?text=Front-End+Development';">
+    </header>
+
+    <main class="container my-5">
+
+        <section id="explicacao" class="mb-5">
+            <h1 class="display-4 fw-bold mb-3">O que é Front-End?</h1>
+            <p class="lead text-muted">
+                O "Front-End" é a parte de um sistema ou aplicação que o usuário vê e com a qual interage diretamente. 
+                É tudo aquilo que aparece na tela quando você acessa um site ou aplicativo, desde o layout, cores, 
+                fontes, botões, formulários até as animações e interações.
+            </p>
+            <p>
+                Enquanto o Back-End cuida da lógica de negócios e processamento de dados no servidor, o Front-End
+                é responsável pela experiência visual e interativa do usuário. Quando você clica em um botão, preenche 
+                um formulário, navega entre páginas ou vê animações em um site, está interagindo com o Front-End.
+            </p>
+            <p>
+                O desenvolvimento Front-End envolve trabalhar com HTML (estrutura), CSS (estilização) e JavaScript 
+                (interatividade), além de frameworks modernos como React, Vue.js, Angular, que facilitam a criação 
+                de interfaces complexas e dinâmicas. É uma área que combina programação com design, exigindo atenção 
+                aos detalhes visuais, usabilidade, acessibilidade e performance.
+            </p>
+            <p>
+                Profissionais de Front-End precisam entender não apenas código, mas também princípios de design, 
+                experiência do usuário (UX), responsividade (adaptação para diferentes tamanhos de tela), otimização 
+                de performance e acessibilidade web. Eles trabalham em conjunto com designers e desenvolvedores Back-End 
+                para criar interfaces que sejam bonitas, funcionais e eficientes.
+            </p>
+        </section>
+
+        <section id="responsabilidades" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Principais Responsabilidades</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-palette h2 text-primary me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Interface e Design</h5>
+                                <p class="card-text">Transformar designs em código funcional, criando interfaces visuais atraentes e intuitivas. Isso inclui implementar layouts responsivos que se adaptam a diferentes dispositivos (desktop, tablet, mobile), aplicar estilos consistentes, trabalhar com tipografia, cores, espaçamentos e garantir que a interface seja fiel ao design proposto, mantendo a identidade visual da marca.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-mouse h2 text-success me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Interatividade e Experiência do Usuário</h5>
+                                <p class="card-text">Implementar funcionalidades interativas que tornam a aplicação dinâmica e responsiva. Desenvolver animações, transições suaves, validações de formulários em tempo real, manipulação do DOM, gerenciamento de estado da aplicação e garantir uma experiência fluida e intuitiva para o usuário, sempre pensando em usabilidade e acessibilidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-phone h2 text-danger me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Responsividade e Mobile-First</h5>
+                                <p class="card-text">Garantir que a aplicação funcione perfeitamente em todos os dispositivos e tamanhos de tela. Implementar layouts flexíveis usando CSS Grid e Flexbox, aplicar media queries, testar em diferentes dispositivos e navegadores, e seguir a abordagem mobile-first para garantir que a experiência seja otimizada principalmente para dispositivos móveis, que hoje representam a maioria do tráfego web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-lightning-charge h2 text-warning me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Performance e Otimização</h5>
+                                <p class="card-text">Otimizar a performance da aplicação para garantir carregamento rápido e experiência fluida. Isso inclui minificação de código, otimização de imagens, lazy loading, code splitting, uso de CDN, otimização de bundle size, implementação de cache e monitoramento de métricas de performance como Core Web Vitals, sempre buscando melhorar a velocidade de carregamento e a responsividade da interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carreira" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Carreira em Front-End</h2>
+            <p class="lead mb-4">
+                O desenvolvimento Front-End oferece uma carreira dinâmica e criativa, com alta demanda no mercado 
+                de trabalho e excelentes oportunidades de crescimento profissional, especialmente com o crescimento 
+                constante de aplicações web e mobile.
+            </p>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">
+                                <i class="bi bi-graph-up-arrow me-2"></i>Mercado de Trabalho
+                            </h5>
+                            <p class="card-text">
+                                O mercado para desenvolvedores Front-End está em constante expansão. Com a necessidade 
+                                cada vez maior de interfaces modernas, responsivas e acessíveis, a demanda por profissionais 
+                                qualificados só aumenta. Empresas de todos os setores, desde e-commerce até fintechs, 
+                                buscam desenvolvedores Front-End para criar experiências digitais excepcionais.
+                            </p>
+                            <p class="card-text">
+                                A área oferece salários competitivos, com muitas oportunidades de trabalho remoto, 
+                                flexibilidade de horários e possibilidade de trabalhar em projetos diversos e inovadores. 
+                                Profissionais experientes podem alcançar posições de Front-End Lead, UI/UX Developer, 
+                                ou até mesmo especializar-se em áreas como animação web, acessibilidade ou performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-success">
+                                <i class="bi bi-ladder me-2"></i>Evolução Profissional
+                            </h5>
+                            <p class="card-text">
+                                A carreira em Front-End possui uma trajetória clara de crescimento: começando como 
+                                <strong>Desenvolvedor Júnior</strong>, você trabalha em componentes simples, aprende 
+                                as bases de HTML, CSS e JavaScript e colabora com desenvolvedores mais experientes. 
+                                Como <strong>Desenvolvedor Pleno</strong>, assume responsabilidades maiores, trabalha 
+                                com frameworks modernos e participa de decisões técnicas.
+                            </p>
+                            <p class="card-text">
+                                Ao evoluir para <strong>Desenvolvedor Sênior</strong>, você se torna referência técnica, 
+                                define arquiteturas de front-end, lidera projetos complexos e influencia decisões de design 
+                                e tecnologia. A partir daí, pode seguir para <strong>Front-End Architect</strong>, 
+                                <strong>Tech Lead</strong>, <strong>Engineering Manager</strong> ou especializar-se em áreas 
+                                como React, Vue.js, Angular, ou focar em performance, acessibilidade ou design systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-3">
+                        <i class="bi bi-star-fill text-warning me-2"></i>Habilidades Essenciais
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>HTML/CSS:</strong> Domínio sólido de estrutura e estilização, incluindo CSS Grid e Flexbox</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>JavaScript:</strong> Conhecimento profundo de ES6+, manipulação do DOM, assincronismo</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Frameworks:</strong> React, Vue.js ou Angular, além de suas ecossistemas</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Responsividade:</strong> Mobile-first, media queries, design adaptativo</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Git e Versionamento:</strong> Controle de versão e colaboração</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Build Tools:</strong> Webpack, Vite, npm/yarn, conhecimento de bundlers</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Design e UX:</strong> Princípios de design, acessibilidade (WCAG), usabilidade</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Performance:</strong> Otimização, lazy loading, code splitting, Core Web Vitals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dia-a-dia" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Dia a Dia de um Desenvolvedor Front-End</h2>
+            <p class="lead mb-4">
+                O trabalho de um desenvolvedor Front-End é criativo e técnico, envolvendo diversas atividades que vão 
+                desde transformar designs em código até otimizar a performance e garantir a melhor experiência do usuário.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-code-slash text-primary me-2"></i>Desenvolvimento
+                            </h5>
+                            <p class="card-text">
+                                Grande parte do tempo é dedicada ao desenvolvimento de componentes, páginas e funcionalidades. 
+                                Isso envolve escrever código HTML semântico, CSS moderno e JavaScript limpo, criar componentes 
+                                reutilizáveis, implementar layouts responsivos e garantir que tudo funcione perfeitamente 
+                                em diferentes navegadores e dispositivos.
+                            </p>
+                            <p class="card-text">
+                                Você trabalha transformando designs em código, implementando animações, criando formulários 
+                                interativos, integrando com APIs, gerenciando estado da aplicação e garantindo que a interface 
+                                seja intuitiva e acessível.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-people text-success me-2"></i>Colaboração
+                            </h5>
+                            <p class="card-text">
+                                O trabalho em equipe é fundamental. Você participa de reuniões de planejamento, revisa código 
+                                de outros desenvolvedores (code review), discute soluções técnicas e de design com o time, 
+                                colabora com designers para entender e implementar layouts, trabalha com desenvolvedores Back-End 
+                                para integrar APIs e alinha expectativas com product managers.
+                            </p>
+                            <p class="card-text">
+                                Comunicação clara é essencial para garantir que designs sejam implementados corretamente, 
+                                que funcionalidades atendam aos requisitos e que todos estejam alinhados. Você também pode 
+                                participar de pair programming e sessões de mentoria.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-bug text-danger me-2"></i>Debugging e Resolução de Problemas
+                            </h5>
+                            <p class="card-text">
+                                Uma parte significativa do trabalho envolve identificar e corrigir problemas. Isso pode incluir 
+                                investigar bugs de layout, problemas de compatibilidade entre navegadores, erros de JavaScript, 
+                                problemas de performance, questões de responsividade e garantir que a aplicação funcione 
+                                corretamente em todos os cenários.
+                            </p>
+                            <p class="card-text">
+                                Você usa ferramentas de desenvolvimento do navegador (DevTools), analisa erros no console, 
+                                testa em diferentes dispositivos e navegadores, e trabalha para garantir que a experiência 
+                                seja consistente e livre de problemas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-palette2 text-info me-2"></i>Design e UX
+                            </h5>
+                            <p class="card-text">
+                                Trabalhar em conjunto com designers e aplicar princípios de UX é parte importante do trabalho. 
+                                Você analisa designs, sugere melhorias técnicas, implementa animações e transições, garante 
+                                acessibilidade (WCAG), testa usabilidade e sempre pensa na experiência do usuário final.
+                            </p>
+                            <p class="card-text">
+                                Você também pode criar protótipos, fazer ajustes de design quando necessário e garantir que 
+                                a interface seja intuitiva, acessível e agradável de usar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-speedometer2 text-warning me-2"></i>Otimização e Performance
+                            </h5>
+                            <p class="card-text">
+                                Garantir que a aplicação seja rápida e eficiente é uma responsabilidade constante. Você otimiza 
+                                imagens, minifica código, implementa lazy loading, faz code splitting, monitora métricas de 
+                                performance (Core Web Vitals), otimiza bundle size e trabalha para melhorar continuamente 
+                                a velocidade de carregamento.
+                            </p>
+                            <p class="card-text">
+                                Você usa ferramentas como Lighthouse, WebPageTest e Chrome DevTools para identificar 
+                                oportunidades de melhoria e garantir que a aplicação ofereça a melhor experiência possível 
+                                em termos de performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-phone text-primary me-2"></i>Testes e Responsividade
+                            </h5>
+                            <p class="card-text">
+                                Testar a aplicação em diferentes dispositivos, navegadores e tamanhos de tela é essencial. 
+                                Você verifica se layouts estão corretos em mobile, tablet e desktop, testa interações touch, 
+                                valida acessibilidade, verifica compatibilidade entre navegadores e garante que tudo funcione 
+                                perfeitamente em todos os cenários.
+                            </p>
+                            <p class="card-text">
+                                Você também pode escrever testes automatizados, usar ferramentas de teste de acessibilidade 
+                                e trabalhar com diferentes dispositivos físicos e emuladores para garantir a melhor experiência 
+                                possível para todos os usuários.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-3">
+                        <i class="bi bi-lightbulb text-warning me-2"></i>Rotina Típica
+                    </h5>
+                    <p class="card-text mb-3">
+                        Um dia típico começa às 9h com uma daily standup de 15 minutos, onde você compartilha o que implementou 
+                        no dia anterior (por exemplo, "finalizei o componente de carrinho de compras com animações"), o que vai fazer 
+                        hoje ("vou criar a página de checkout responsiva e integrar com a API de pagamento") e se há algum bloqueio 
+                        ("preciso do design final do formulário de endereço para implementar").
+                    </p>
+                    <p class="card-text mb-3">
+                        Após a daily, você começa a trabalhar em uma nova feature: uma página de perfil do usuário. Primeiro, você 
+                        analisa o design no Figma, identifica os breakpoints necessários (mobile, tablet, desktop), planeja a 
+                        estrutura de componentes (Header, UserInfo, SettingsForm, ActivityHistory). Você cria os componentes em React 
+                        usando hooks para gerenciar estado, implementa validações de formulário com react-hook-form, adiciona feedback 
+                        visual com animações CSS, garante acessibilidade (ARIA labels, navegação por teclado), testa em diferentes 
+                        navegadores e dispositivos, e integra com a API do Back-End usando fetch ou axios.
+                    </p>
+                    <p class="card-text mb-3">
+                        No meio da manhã, você recebe um feedback do QA: o layout está quebrando no iPhone SE (tela pequena). Você 
+                        abre o Chrome DevTools, ativa o modo de dispositivo, testa em diferentes resoluções, identifica que um card 
+                        está ultrapassando a largura da tela. Você ajusta o CSS, usa Flexbox para reorganizar os elementos, adiciona 
+                        media queries específicas, testa novamente e verifica que agora está responsivo. Você também aproveita para 
+                        otimizar as imagens, convertendo para WebP e implementando lazy loading.
+                    </p>
+                    <p class="card-text mb-3">
+                        À tarde, você revisa um pull request de um colega que implementou um modal de confirmação. Você verifica se 
+                        o componente é reutilizável, se as animações estão suaves, se o modal fecha ao clicar fora ou pressionar ESC, 
+                        se está acessível (foco fica preso dentro do modal, foco retorna ao elemento que abriu), se o z-index está 
+                        correto, se funciona bem em mobile (touch events), se os estilos seguem o design system do projeto e se não 
+                        há problemas de performance (re-renders desnecessários). Você testa manualmente, faz comentários no código 
+                        sugerindo melhorias e aprova após as correções.
+                    </p>
+                    <p class="card-text mb-3">
+                        Depois, você participa de uma reunião com o designer para alinhar a implementação de uma nova feature. Você 
+                        mostra o que já foi desenvolvido, discute possíveis melhorias de UX (como adicionar um skeleton loader enquanto 
+                        os dados carregam), sugere alternativas técnicas quando algo do design é difícil de implementar ou pode impactar 
+                        performance, e alinha os próximos passos. Você também aproveita para validar se as cores e espaçamentos estão 
+                        seguindo o design system corretamente.
+                    </p>
+                    <p class="card-text mb-0">
+                        No final do dia, você recebe um alerta do Lighthouse: a página de produtos está com performance abaixo do esperado 
+                        (score de 65). Você analisa o relatório, identifica que as imagens estão muito grandes e sem otimização, que há 
+                        JavaScript não utilizado sendo carregado e que os estilos críticos não estão inline. Você otimiza as imagens 
+                        (comprime, redimensiona, converte para WebP), implementa code splitting para carregar componentes apenas quando 
+                        necessário, extrai CSS crítico, adiciona preload para recursos importantes e verifica que o score subiu para 92. 
+                        Antes de encerrar, você commita suas alterações, faz push, atualiza a documentação dos componentes criados e 
+                        prepara um resumo para a próxima daily. O trabalho é variado e criativo, exigindo não apenas conhecimento técnico 
+                        profundo, mas também atenção obsessiva aos detalhes visuais, senso estético, empatia com o usuário final e 
+                        habilidades de resolução de problemas complexos de interface e performance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="linguagens" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Frameworks e Bibliotecas</h2>
+            <p class="text-muted mb-4">
+                Formações completas em Frameworks e Bibliotecas Modernas para desenvolvimento Front-End.
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/react.png" 
+                             class="card-img-top" 
+                             alt="Preview do curso de React"
+                             onerror="this.src='https://placehold.co/600x400/61dafb/ffffff?text=React';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Formação React</h5>
+                            <p class="card-text text-muted small flex-grow-1">Aprenda Front-End com React, a biblioteca JavaScript mais popular do mundo. Uma jornada completa, do básico ao avançado, com projetos práticos, hooks, gerenciamento de estado, roteamento e muito mais. Construa interfaces modernas e interativas, prepare-se para vagas valorizadas no mercado e domine uma das tecnologias mais demandadas.</p>
+                            <a href="https://cursos.alura.com.br/career/path/desenvolvimento-frontend-react" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/vue.jpg" 
+                             class="card-img-top" 
+                             alt="Preview do curso de Vue.js"
+                             onerror="this.src='https://placehold.co/600x400/4fc08d/ffffff?text=Vue.js';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Formação Vue.js</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine o desenvolvimento Front-End com Vue.js, um framework progressivo e intuitivo. Aprenda desde os conceitos fundamentais até técnicas avançadas, com projetos práticos, composição de componentes, gerenciamento de estado com Pinia, roteamento e integração com APIs. Construa aplicações modernas e escaláveis.</p>
+                            <a href="https://cursos.alura.com.br/formacao-vuejs3" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/angular.jpg" 
+                             class="card-img-top" 
+                             alt="Preview do curso de Angular"
+                             onerror="this.src='https://placehold.co/600x400/dd0031/ffffff?text=Angular';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Formação Angular</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine o desenvolvimento Front-End com Angular, o framework TypeScript da Google. Aprenda desde os conceitos básicos até arquitetura avançada, com projetos práticos, componentes, serviços, roteamento, formulários reativos e muito mais. Construa aplicações enterprise-level robustas e escaláveis.</p>
+                            <a href="https://cursos.alura.com.br/formacao-angular-crie-aplicacoes-web-ageis" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="tecnologias" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Tecnologias</h2>
+            <p class="text-muted mb-4">
+                Ferramentas e Tecnologias Essenciais para desenvolvimento Front-End moderno.
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/html-css.webp" 
+                             class="card-img-top" 
+                             alt="Preview do curso de HTML e CSS"
+                             onerror="this.src='https://placehold.co/600x400/264de4/ffffff?text=HTML+CSS';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">HTML e CSS</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine os fundamentos do desenvolvimento web com HTML e CSS. Aprenda a criar estruturas semânticas, estilizar páginas com CSS moderno, trabalhar com Flexbox e Grid, criar layouts responsivos e aplicar boas práticas de acessibilidade. Essas são as bases essenciais para qualquer desenvolvedor Front-End.</p>
+                            <a href="https://cursos.alura.com.br/formacao-html-css" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/js.webp" 
+                             class="card-img-top" 
+                             alt="Preview do curso de JavaScript"
+                             onerror="this.src='https://placehold.co/600x400/f7df1e/000000?text=JavaScript';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">JavaScript</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine JavaScript, a linguagem de programação mais usada no desenvolvimento web. Aprenda desde os fundamentos até conceitos avançados como ES6+, assincronismo, manipulação do DOM, programação orientada a objetos, funções de alta ordem e muito mais. JavaScript é essencial para criar interatividade e dinamismo nas aplicações web.</p>
+                            <a href="https://cursos.alura.com.br/course/javascript-aprendendo-programar" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/ts.png" 
+                             class="card-img-top" 
+                             alt="Preview do curso de TypeScript"
+                             onerror="this.src='https://placehold.co/600x400/3178c6/ffffff?text=TypeScript';">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">TypeScript</h5>
+                            <p class="card-text text-muted small flex-grow-1">Aprenda TypeScript, o superset do JavaScript que adiciona tipagem estática. Domine tipos, interfaces, generics, decorators e todas as funcionalidades que tornam o desenvolvimento mais seguro e escalável. TypeScript é amplamente usado em frameworks modernos como Angular e é cada vez mais adotado em projetos React e Vue.js.</p>
+                            <a href="https://cursos.alura.com.br/formacao-typescript-desenvolva-front-end-produtividade" class="btn btn-primary mt-3 stretched-link" target="_blank" rel="noopener noreferrer">
+                                Ver na Alura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-muted py-4 border-top">
+        <p class="mb-0">&copy; 2025 Guia de Stacks.</p>
+    </footer>
+
+    <button class="btn btn-primary theme-toggle" id="theme-toggle-button" title="Alternar tema">
+        <i class="bi bi-moon-fill"></i>
+        <i class="bi bi-sun-fill"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="../js/stacks-common.js"></script>
+</body>
+</html>
