@@ -7,20 +7,19 @@
 
     <title>Guia de stacks</title>
 
-    <!-- Incluindo Bootstrap 5 CSS para Estrutura e Estilização -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-    
 </head>
 
 <body>
 
-
     <div class="container-fluid p-0 d-flex">
 
-        <!-- BARRA LATERAL ESQUERDA (SIDEBAR) -->
+
         <nav class="sidebar-left col-md-3 col-lg-3 d-none d-md-block">
             <h4>Seções do Documento</h4>
             <ul class="nav flex-column">
@@ -36,11 +35,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#secao4"> Diagnóstico (Quiz)</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#secao5"> Trilhas de Desenvolvimento</a>
+                </li>
             </ul>
-            <!-- Suas alterações removeram as "Seções de Fases Adicionais" -->
+
+
+            <div class="p-3 mt-4 text-center">
+                <button id="theme-toggle" class="btn btn-secondary btn-sm">
+
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </nav>
 
-        <!-- CONTEÚDO PRINCIPAL -->
+
         <div class="main-content col-md-9 col-lg-9">
 
             <div class="caixa-simples">
@@ -56,7 +65,7 @@
                     de tecnologia, enquanto uma parcela significativa de sua força de trabalho se tornará redundante,
                     elevando as taxas de desemprego estrutural e aprofundando a desigualdade social.</p>
 
-                <h2 id="secao2" class="titulo-2">2. Projeto [Nome do Projeto] e o compromisso com a ODS 8</h2>
+                <h2 id="secao2" class="titulo-2">2. Projeto Guia de Stacks e o compromisso com a ODS 8</h2>
 
                 <p>Nosso projeto propõe uma solução estratégica e humanizada para este desafio, alinhada diretamente com
                     o Objetivo de Desenvolvimento Sustentável (ODS) 8 da ONU: Promover o crescimento econômico
@@ -70,7 +79,7 @@
                 <p class="subtexto">A solução se estrutura em três pilares principais, pensados para profissionais já
                     inseridos no mercado (e aqueles em busca de recolocação):</p>
 
-                <!-- CAIXA VERTICAL DE DESTAQUE -->
+
                 <div class="caixa-info-vertical">
                     <h3>Visão Geral e Metodologia</h3>
                     <p>Esta seção destaca a importância do Redirecionamento 4.0, garantindo que a requalificação
@@ -93,16 +102,14 @@
                     </ul>
                 </p>
 
-                <!-- CONTAINER DO BOTÃO QUIZ -->
+
                 <div class="text-center my-5">
-                    <!-- Botão estilizado com Bootstrap e CSS customizado -->
+
                     <button id="quiz-button" class="btn btn-lg btn-quiz" onclick="iniciarQuiz()">
                         <i class="fas fa-play-circle me-2"></i> Iniciar Quiz Vocacional
                     </button>
                     <p id="quiz-message" class="mt-3 text-muted"></p>
                 </div>
-
-
 
                 <p id="secao5"><strong>B. Redirecionamento Personalizado e Capacitação Direcionada</strong></p>
                 <p>Com base no diagnóstico, o profissional recebe um plano de ação altamente personalizado:</p>
@@ -127,41 +134,99 @@
                 </ul>
 
 
+                <div class="text-center stack-buttons-container">
+                    <h3 class="mb-4 titulo-2">Escolha sua Trilha de Desenvolvimento</h3>
+
+                    <a href="./pages/front-end.html" class="btn-stack btn-frontend">
+                        <i class="fas fa-laptop-code me-2"></i> Front-End
+                    </a>
+
+                    <a href="./pages/back-end.html" class="btn-stack btn-backend">
+                        <i class="fas fa-server me-2"></i> Back-End
+                    </a>
+                </div>
+
             </div>
 
         </div>
     </div>
 
-    <!-- Incluindo Font Awesome para o ícone no botão (melhora o design) -->
+
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <!-- Incluindo Bootstrap 5 JS para funcionalidades (opcional, mas recomendado) -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 
     <script>
-        // Função JavaScript para o Botão do Quiz
         function iniciarQuiz() {
             const messageElement = document.getElementById('quiz-message');
-            // Simula a ação de iniciar o quiz
+
             messageElement.innerHTML =
                 '<span class="text-success fw-bold">Quiz iniciado! Você será redirecionado em breve.</span>';
 
-            // Substitua esta linha por um redirecionamento real:
-            // window.location.href = 'link-do-seu-quiz.html'; 
 
-            // Exemplo de como usar o JS para desabilitar o botão após o clique:
             setTimeout(() => {
                 document.getElementById('quiz-button').disabled = true;
                 document.getElementById('quiz-button').textContent = 'Quiz Iniciado!';
             }, 2000);
         }
+
+
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.getElementById('theme-toggle');
+
+            const isDarkMode = body.classList.toggle('dark-mode');
+
+
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+
+
+            if (isDarkMode) {
+
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                themeToggle.classList.remove('btn-secondary');
+                themeToggle.classList.add('btn-warning');
+            } else {
+
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                themeToggle.classList.remove('btn-warning');
+                themeToggle.classList.add('btn-secondary');
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.getElementById('theme-toggle');
+
+
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+
+
+            if (themeToggle) {
+                if (document.body.classList.contains('dark-mode')) {
+
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                    themeToggle.classList.remove('btn-secondary');
+                    themeToggle.classList.add('btn-warning');
+                } else {
+
+                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                    themeToggle.classList.remove('btn-warning');
+                    themeToggle.classList.add('btn-secondary');
+                }
+
+
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
     </script>
 
-    <a href="./pages/back-end.html">Back-End</a>
-    <br>
-    <a href="./pages/front-end.html">Front-End</a>
 
 
 </body>

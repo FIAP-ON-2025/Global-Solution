@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiz Vocacional de Tecnologia</title>
+</head>
+<body>
+
+<h1>Quiz Vocacional – Áreas de Tecnologia</h1>
+
+<div class="quiz-container">
+
+  <form id="quizForm">
+
+    <!-- PERGUNTAS -->
+    <div class="question">
+      <p><b>1. Quando você pensa em tecnologia, o que mais te atrai?</b></p>
+      <label><input type="radio" name="q1" value="frontend"> Criar interfaces bonitas</label><br>
+      <label><input type="radio" name="q1" value="backend"> Lógica por trás dos sistemas</label><br>
+      <label><input type="radio" name="q1" value="cloud"> Automatizar e orquestrar serviços</label><br>
+      <label><input type="radio" name="q1" value="infra"> Configurar redes e servidores</label>
+    </div>
+
+    <div class="question">
+      <p><b>2. O que você gosta mais de fazer em um projeto?</b></p>
+      <label><input type="radio" name="q2" value="frontend"> Criar telas e experiências</label><br>
+      <label><input type="radio" name="q2" value="backend"> Resolver problemas lógicos</label><br>
+      <label><input type="radio" name="q2" value="cloud"> Construir pipelines e integrações</label><br>
+      <label><input type="radio" name="q2" value="infra"> Garantir estabilidade e segurança</label>
+    </div>
+
+    <div class="question">
+      <p><b>3. Qual cenário te deixa mais animado?</b></p>
+      <label><input type="radio" name="q3" value="frontend"> Trabalhar com design e responsividade</label><br>
+      <label><input type="radio" name="q3" value="backend"> Criar APIs e bancos</label><br>
+      <label><input type="radio" name="q3" value="cloud"> Monitorar serviços na nuvem</label><br>
+      <label><input type="radio" name="q3" value="infra"> Testar redes e conexões</label>
+    </div>
+
+    <div class="question">
+      <p><b>4. Quando algo quebra, qual é sua primeira ação?</b></p>
+      <label><input type="radio" name="q4" value="frontend"> Revisar componentes visuais</label><br>
+      <label><input type="radio" name="q4" value="backend"> Checar logs e fluxo de dados</label><br>
+      <label><input type="radio" name="q4" value="cloud"> Ver serviços e deploy</label><br>
+      <label><input type="radio" name="q4" value="infra"> Testar portas, cabos e permissões</label>
+    </div>
+
+    <div class="question">
+      <p><b>5. Qual tecnologia te parece mais interessante?</b></p>
+      <label><input type="radio" name="q5" value="frontend"> HTML, CSS, React</label><br>
+      <label><input type="radio" name="q5" value="backend"> Python, Java, SQL</label><br>
+      <label><input type="radio" name="q5" value="cloud"> AWS, Docker, Kubernetes</label><br>
+      <label><input type="radio" name="q5" value="infra"> Redes, Firewalls, Linux</label>
+    </div>
+
+    <div class="question">
+      <p><b>6. Qual desafio te parece mais legal?</b></p>
+      <label><input type="radio" name="q6" value="frontend"> Criar algo visual incrível</label><br>
+      <label><input type="radio" name="q6" value="backend"> Melhorar performance do sistema</label><br>
+      <label><input type="radio" name="q6" value="cloud"> Escalar uma aplicação</label><br>
+      <label><input type="radio" name="q6" value="infra"> Manter tudo seguro e estável</label>
+    </div>
+
+    <div class="question">
+      <p><b>7. Como você prefere aprender?</b></p>
+      <label><input type="radio" name="q7" value="frontend"> Criando interfaces</label><br>
+      <label><input type="radio" name="q7" value="backend"> Resolvendo lógica</label><br>
+      <label><input type="radio" name="q7" value="cloud"> Explorando serviços de nuvem</label><br>
+      <label><input type="radio" name="q7" value="infra"> Configurando equipamentos</label>
+    </div>
+
+    <button type="button" onclick="calcularResultado()">Enviar Respostas</button>
+
+  </form>
+
+  <div id="resultado"></div>
+
+</div>
+
+<!-- LÓGICA DE PONTUAÇÃO -->
+<script>
+function calcularResultado() {
+  const respostas = new FormData(document.getElementById("quizForm"));
+
+  let pontuacao = {
+    frontend: 0,
+    backend: 0,
+    cloud: 0,
+    infra: 0
+  };
+
+  // Soma pontos
+  for (let [, valor] of respostas.entries()) {
+    pontuacao[valor]++;
+  }
+
+  // Área com maior pontuação
+  let areaFinal = Object.keys(pontuacao).reduce((a, b) =>
+    pontuacao[a] > pontuacao[b] ? a : b
+  );
+
+  let mensagem = {
+    frontend: "🎨 Você combina com FRONTEND! Criatividade, interfaces e UX são seu forte.",
+    backend: "🧠 Você combina com BACKEND! Lógica, performance e dados fazem sentido pra você.",
+    cloud: "☁️ Você combina com CLOUD! Automação, escalabilidade e arquitetura te atraem.",
+    infra: "🛠️ Você combina com INFRAESTRUTURA! Segurança, redes e estabilidade são sua praia."
+  };
+
+  document.getElementById("resultado").innerText = mensagem[areaFinal];
+}
+</script>
+
+</body>
+</html>
