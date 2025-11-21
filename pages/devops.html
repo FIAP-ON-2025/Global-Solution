@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de DevOps</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/stacks-common.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <a href="../index.html" class="btn btn-primary home-button" title="Voltar para Home">
+        <i class="bi bi-house-fill"></i>
+    </a>
+
+    <header>
+        <img src="../images/devops-header.png" class="header-image"
+            alt="Banner representando a cultura DevOps">
+    </header>
+
+    <main class="container my-5">
+
+        <section id="explicacao" class="mb-5">
+            <h1 class="display-4 fw-bold mb-3">O que é DevOps?</h1>
+            <p class="lead text-muted">
+                DevOps não é apenas um cargo ou uma ferramenta, é uma cultura e um conjunto de práticas que une
+                o desenvolvimento de software (Dev) e as operações de TI (Ops). O objetivo principal é encurtar
+                o ciclo de desenvolvimento de sistemas e fornecer entrega contínua com alta qualidade de software.
+            </p>
+            <p>
+                Tradicionalmente, desenvolvedores e administradores de sistemas trabalhavam em silos separados,
+                o que gerava conflitos e atrasos. O DevOps quebra essas barreiras, promovendo colaboração,
+                automação e monitoramento em todas as etapas da construção do software, desde a integração,
+                testes, liberação até a implantação e gerenciamento de infraestrutura.
+            </p>
+            <p>
+                Profissionais de DevOps focam na automação de processos manuais, criação de pipelines de CI/CD
+                (Integração Contínua e Entrega Contínua), gerenciamento de infraestrutura como código (IaC) e
+                garantia de confiabilidade e escalabilidade dos sistemas. É uma área vital para empresas que
+                desejam inovar rapidamente sem sacrificar a estabilidade.
+            </p>
+        </section>
+
+        <section id="responsabilidades" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Principais Responsabilidades</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-arrow-repeat h2 text-primary me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">CI/CD (Integração e Entrega Contínua)</h5>
+                                <p class="card-text">Criar e manter pipelines automatizados que compilam, testam e
+                                    implantam o código em diferentes ambientes (desenvolvimento, homologação, produção).
+                                    Isso garante que o software seja entregue de forma rápida, frequente e confiável,
+                                    reduzindo o risco de erros humanos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-code-square h2 text-success me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Infraestrutura como Código (IaC)</h5>
+                                <p class="card-text">Gerenciar e provisionar a infraestrutura através de arquivos de
+                                    definição legíveis por máquina, em vez de configuração física de hardware ou
+                                    ferramentas de configuração interativas. Ferramentas como Terraform e Ansible são
+                                    essenciais aqui.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-activity h2 text-danger me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Monitoramento e Logging</h5>
+                                <p class="card-text">Implementar soluções para monitorar a saúde das aplicações e da
+                                    infraestrutura em tempo real. Analisar logs para identificar problemas
+                                    proativamente, garantir a disponibilidade do serviço e responder rapidamente a
+                                    incidentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body d-flex align-items-start">
+                            <i class="bi bi-shield-check h2 text-warning me-3"></i>
+                            <div>
+                                <h5 class="card-title fw-bold">Segurança (DevSecOps)</h5>
+                                <p class="card-text">Integrar práticas de segurança desde o início do ciclo de
+                                    desenvolvimento. Automatizar verificações de vulnerabilidade, garantir conformidade
+                                    e proteger a infraestrutura e os dados contra ameaças, promovendo a filosofia de
+                                    "Security as Code".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carreira" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Carreira em DevOps</h2>
+            <p class="lead mb-4">
+                A carreira em DevOps é uma das mais valorizadas no mercado de tecnologia atual, exigindo um mix
+                único de habilidades técnicas e soft skills voltadas para colaboração e processos.
+            </p>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">
+                                <i class="bi bi-graph-up-arrow me-2"></i>Mercado de Trabalho
+                            </h5>
+                            <p class="card-text">
+                                A demanda por engenheiros DevOps e SREs (Site Reliability Engineers) explodiu nos
+                                últimos anos.
+                                Empresas buscam desesperadamente profissionais que consigam fazer a ponte entre o código
+                                e a
+                                infraestrutura, garantindo agilidade e estabilidade.
+                            </p>
+                            <p class="card-text">
+                                Os salários costumam ser acima da média do mercado de TI, refletindo a complexidade e a
+                                responsabilidade do cargo. O trabalho remoto é muito comum, permitindo atuar em empresas
+                                globais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-success">
+                                <i class="bi bi-ladder me-2"></i>Evolução Profissional
+                            </h5>
+                            <p class="card-text">
+                                Muitos profissionais chegam ao DevOps vindo de background de Desenvolvimento (Dev) ou de
+                                Administração de Sistemas (SysAdmin). A evolução natural envolve dominar cada vez mais
+                                ferramentas de orquestração, nuvem e arquitetura.
+                            </p>
+                            <p class="card-text">
+                                Cargos avançados incluem <strong>DevOps Lead</strong>, <strong>Cloud Architect</strong>,
+                                <strong>SRE Manager</strong> ou <strong>Platform Engineer</strong>, focando na criação
+                                de plataformas internas para desenvolvedores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-3">
+                        <i class="bi bi-star-fill text-warning me-2"></i>Habilidades Essenciais
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Linux
+                                        e Scripting:</strong> Domínio do terminal e scripts (Bash, Python, Go).</li>
+                                <li class="mb-2"><i
+                                        class="bi bi-check-circle-fill text-success me-2"></i><strong>CI/CD:</strong>
+                                    Jenkins, GitHub Actions, GitLab CI.</li>
+                                <li class="mb-2"><i
+                                        class="bi bi-check-circle-fill text-success me-2"></i><strong>Containers:</strong>
+                                    Docker e Kubernetes (Orquestração).</li>
+                                <li class="mb-2"><i
+                                        class="bi bi-check-circle-fill text-success me-2"></i><strong>IaC:</strong>
+                                    Terraform, Ansible, CloudFormation.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Cloud
+                                        Providers:</strong> AWS, Azure ou Google Cloud.</li>
+                                <li class="mb-2"><i
+                                        class="bi bi-check-circle-fill text-success me-2"></i><strong>Monitoramento:</strong>
+                                    Prometheus, Grafana, ELK Stack.</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Redes
+                                        e Segurança:</strong> Protocolos, Firewalls, VPNs, SSL/TLS.</li>
+                                <li class="mb-2"><i
+                                        class="bi bi-check-circle-fill text-success me-2"></i><strong>Git:</strong>
+                                    Fluxos de trabalho avançados e gestão de repositórios.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dia-a-dia" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Dia a Dia de um Engenheiro DevOps</h2>
+            <p class="lead mb-4">
+                O cotidiano em DevOps é dinâmico, focado em resolver gargalos, automatizar tarefas repetitivas e
+                garantir que o time de desenvolvimento tenha um caminho livre para colocar código em produção.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-gear-wide-connected text-primary me-2"></i>Automação
+                            </h5>
+                            <p class="card-text">
+                                Escrever scripts e configurar ferramentas para eliminar trabalho manual. Se você precisa
+                                fazer a mesma tarefa mais de duas vezes, automatize-a. Isso inclui provisionamento de
+                                servidores, backups e deploys.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-hdd-rack text-success me-2"></i>Gestão de Infra
+                            </h5>
+                            <p class="card-text">
+                                Manter os ambientes de execução saudáveis. Atualizar versões de clusters Kubernetes,
+                                gerenciar bancos de dados, ajustar regras de firewall e garantir que os recursos
+                                computacionais estejam dimensionados corretamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-life-preserver text-danger me-2"></i>Incident Response
+                            </h5>
+                            <p class="card-text">
+                                Quando algo quebra em produção, o DevOps é frequentemente o primeiro a ser acionado.
+                                Investigar a causa raiz, restaurar o serviço e criar post-mortems para evitar
+                                reincidência faz parte da rotina.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-3">
+                        <i class="bi bi-lightbulb text-warning me-2"></i>Rotina Típica
+                    </h5>
+                    <p class="card-text mb-3">
+                        O dia começa verificando os dashboards de monitoramento no Grafana para garantir que nenhum
+                        serviço
+                        apresentou anomalias durante a noite. Na daily standup, você informa que o novo pipeline de
+                        deploy
+                        para o ambiente de staging está pronto e que hoje focará na migração do banco de dados.
+                    </p>
+                    <p class="card-text mb-3">
+                        Pela manhã, você trabalha em um script Terraform para provisionar um novo cluster Kubernetes na
+                        AWS,
+                        garantindo que todas as políticas de segurança estejam aplicadas. Um desenvolvedor relata que o
+                        build
+                        está falhando no CI; você investiga os logs do Jenkins, identifica uma dependência conflitante e
+                        ajuda
+                        a corrigir o Dockerfile.
+                    </p>
+                    <p class="card-text mb-0">
+                        À tarde, você participa de uma reunião de arquitetura para planejar a estratégia de Disaster
+                        Recovery
+                        da empresa. Depois, dedica um tempo para otimizar os custos da nuvem, identificando recursos
+                        ociosos.
+                        Antes de encerrar, revisa um Pull Request de um colega que altera as configurações de
+                        auto-scaling
+                        e garante que a documentação da infraestrutura está atualizada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="mb-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Ferramentas e Tecnologias</h2>
+            <p class="text-muted mb-4">
+                O ecossistema DevOps é vasto. Aqui estão algumas das principais ferramentas e formações.
+            </p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/docker.jpg" class="card-img-top"
+                            alt="Preview do curso de Docker">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Docker e Containers</h5>
+                            <p class="card-text text-muted small flex-grow-1">A base da infraestrutura moderna. Aprenda
+                                a criar imagens leves, gerenciar containers e garantir portabilidade das aplicações
+                                entre diferentes ambientes.</p>
+                            <a href="https://cursos.alura.com.br/course/docker-criando-gerenciando-containers" class="btn btn-primary mt-3 stretched-link">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/kubernetes.png" class="card-img-top"
+                            alt="Preview do curso de Kubernetes">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Kubernetes (K8s)</h5>
+                            <p class="card-text text-muted small flex-grow-1">Domine a orquestração de containers.
+                                Aprenda a gerenciar clusters, escalar aplicações automaticamente e garantir alta
+                                disponibilidade em produção.</p>
+                            <a href="https://cursos.alura.com.br/course/infraestrutura-codigo-terraform-kubernetes" class="btn btn-primary mt-3 stretched-link">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/terraform.png" class="card-img-top"
+                            alt="Preview do curso de Terraform">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Terraform (IaC)</h5>
+                            <p class="card-text text-muted small flex-grow-1">Automatize a criação de infraestrutura.
+                                Aprenda a provisionar recursos na nuvem (AWS, Azure, GCP) usando código declarativo e
+                                versionável.</p>
+                            <a href="https://cursos.alura.com.br/course/infraestrutura-codigo-terraform-kubernetes" class="btn btn-primary mt-3 stretched-link">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/jenkins.png" class="card-img-top"
+                            alt="Preview do curso de Jenkins">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">CI/CD com Jenkins</h5>
+                            <p class="card-text text-muted small flex-grow-1">Construa pipelines de entrega contínua
+                                robustos. Automatize testes, builds e deploys para acelerar o ciclo de desenvolvimento.
+                            </p>
+                            <a href="https://cursos.alura.com.br/course/jenkins-automatize-pipelines-qualidade-codigo-deploy-seguro" class="btn btn-primary mt-3 stretched-link">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/linux.png" class="card-img-top"
+                            alt="Preview do curso de Linux">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Linux e Scripting</h5>
+                            <p class="card-text text-muted small flex-grow-1">O sistema operacional da nuvem. Domine a
+                                linha de comando, permissões, redes e automação com Shell Script para gerenciar
+                                servidores.</p>
+                            <a href="https://cursos.alura.com.br/formacao-comecando-linux" class="btn btn-primary mt-3 stretched-link">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 card-course">
+                        <img src="../images/prometheus-grafana.webp"
+                            class="card-img-top" alt="Preview do curso de Monitoramento">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Monitoramento e Observabilidade</h5>
+                            <p class="card-text text-muted small flex-grow-1">Não voe às cegas. Aprenda a coletar
+                                métricas, criar dashboards visuais e configurar alertas inteligentes para manter seus
+                                sistemas saudáveis.</p>
+                            <a href="https://cursos.alura.com.br/course/monitoramento-prometheus-grafana-alertmanager" class="btn btn-primary mt-3 stretched-link">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-muted py-4 border-top">
+        <p class="mb-0">&copy; 2025 Guia de Stacks.</p>
+    </footer>
+
+    <button class="btn btn-primary theme-toggle" id="theme-toggle-button" title="Alternar tema">
+        <i class="bi bi-moon-fill"></i>
+        <i class="bi bi-sun-fill"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/stacks-common.js"></script>
+</body>
+
+</html>
