@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const htmlElement = document.documentElement;
     const bodyElement = document.body;
 
-    // Função para sincronizar o tema
     const syncTheme = (theme) => {
         if (theme === 'dark') {
             bodyElement.classList.add('dark-mode');
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         htmlElement.setAttribute('data-bs-theme', savedTheme);
         syncTheme(savedTheme);
     } else {
-        // Se não houver tema salvo, sincroniza o tema padrão
         syncTheme(htmlElement.getAttribute('data-bs-theme') || 'light');
     }
 });

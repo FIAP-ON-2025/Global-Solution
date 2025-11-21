@@ -1,115 +1,265 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="light">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Quiz Vocacional de Tecnologia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Vocacional</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="../css/stacks-common.css"> 
+    <link rel="stylesheet" href="../css/quiz.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
 
-<h1>Quiz Vocacional – Áreas de Tecnologia</h1>
+    <a href="../index.html" class="btn btn-primary home-button" title="Voltar para Home">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    
+    <main class="container my-5">
+        <div class="card p-4 shadow-lg rounded-3">
 
-<div class="quiz-container">
+            <div class="quiz-header text-center mb-5">
+                <h1 class="display-5 fw-bold mb-3" style="color: var(--bs-primary);">Quiz Vocacional – Áreas de Tecnologia</h1>
+                <p class="lead text-muted">Mapeie suas habilidades e descubra sua trilha tecnológica ideal.</p>
+                <div id="resultado-message" class="mt-3"></div> 
+            </div>
 
-  <form id="quizForm">
+            <form id="quizForm">
 
-    <!-- PERGUNTAS -->
-    <div class="question">
-      <p><b>1. Quando você pensa em tecnologia, o que mais te atrai?</b></p>
-      <label><input type="radio" name="q1" value="frontend"> Criar interfaces bonitas</label><br>
-      <label><input type="radio" name="q1" value="backend"> Lógica por trás dos sistemas</label><br>
-      <label><input type="radio" name="q1" value="cloud"> Automatizar e orquestrar serviços</label><br>
-      <label><input type="radio" name="q1" value="infra"> Configurar redes e servidores</label>
-    </div>
+                <div class="question mb-5">
+                    <p class="fw-bold fs-5 mb-3">1. Quando você pensa em tecnologia, o que mais te atrai?</p>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q1" value="frontend"> 
+                                <span class="card-content"><i class="bi bi-palette-fill"></i> Criar interfaces bonitas</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q1" value="backend"> 
+                                <span class="card-content"><i class="bi bi-cpu-fill"></i> Lógica por trás dos sistemas</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q1" value="cloud"> 
+                                <span class="card-content"><i class="bi bi-cloud-arrow-up-fill"></i> Automatizar e orquestrar serviços</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q1" value="infra"> 
+                                <span class="card-content"><i class="bi bi-server"></i> Configurar redes e servidores</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="question">
-      <p><b>2. O que você gosta mais de fazer em um projeto?</b></p>
-      <label><input type="radio" name="q2" value="frontend"> Criar telas e experiências</label><br>
-      <label><input type="radio" name="q2" value="backend"> Resolver problemas lógicos</label><br>
-      <label><input type="radio" name="q2" value="cloud"> Construir pipelines e integrações</label><br>
-      <label><input type="radio" name="q2" value="infra"> Garantir estabilidade e segurança</label>
-    </div>
+                <div class="question mb-5">
+                    <p class="fw-bold fs-5 mb-3">2. O que você gosta mais de fazer em um projeto?</p>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q2" value="frontend"> 
+                                <span class="card-content"><i class="bi bi-hand-index-thumb"></i> Criar telas e experiências</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q2" value="backend"> 
+                                <span class="card-content"><i class="bi bi-database-fill"></i> Resolver problemas lógicos</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q2" value="cloud"> 
+                                <span class="card-content"><i class="bi bi-gear-fill"></i> Construir pipelines e integrações</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q2" value="infra"> 
+                                <span class="card-content"><i class="bi bi-hdd-network-fill"></i> Garantir estabilidade e segurança</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="question">
-      <p><b>3. Qual cenário te deixa mais animado?</b></p>
-      <label><input type="radio" name="q3" value="frontend"> Trabalhar com design e responsividade</label><br>
-      <label><input type="radio" name="q3" value="backend"> Criar APIs e bancos</label><br>
-      <label><input type="radio" name="q3" value="cloud"> Monitorar serviços na nuvem</label><br>
-      <label><input type="radio" name="q3" value="infra"> Testar redes e conexões</label>
-    </div>
+                <div class="question mb-5">
+                    <p class="fw-bold fs-5 mb-3">3. Qual cenário te deixa mais animado?</p>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q3" value="frontend"> 
+                                <span class="card-content"><i class="bi bi-code-square"></i> Trabalhar com design e responsividade</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q3" value="backend"> 
+                                <span class="card-content"><i class="bi bi-file-earmark-code-fill"></i> Criar APIs e bancos</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q3" value="cloud"> 
+                                <span class="card-content"><i class="bi bi-boxes"></i> Monitorar serviços na nuvem</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q3" value="infra"> 
+                                <span class="card-content"><i class="bi bi-diagram-3-fill"></i> Testar redes e conexões</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="question">
-      <p><b>4. Quando algo quebra, qual é sua primeira ação?</b></p>
-      <label><input type="radio" name="q4" value="frontend"> Revisar componentes visuais</label><br>
-      <label><input type="radio" name="q4" value="backend"> Checar logs e fluxo de dados</label><br>
-      <label><input type="radio" name="q4" value="cloud"> Ver serviços e deploy</label><br>
-      <label><input type="radio" name="q4" value="infra"> Testar portas, cabos e permissões</label>
-    </div>
+                <div class="question mb-5">
+                    <p class="fw-bold fs-5 mb-3">4. Quando algo quebra, qual é sua primeira ação?</p>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q4" value="frontend"> 
+                                <span class="card-content"><i class="bi bi-eye-fill"></i> Revisar componentes visuais</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q4" value="backend"> 
+                                <span class="card-content"><i class="bi bi-bug-fill"></i> Checar logs e fluxo de dados</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q4" value="cloud"> 
+                                <span class="card-content"><i class="bi bi-speedometer2"></i> Ver serviços e deploy</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q4" value="infra"> 
+                                <span class="card-content"><i class="bi bi-cone-striped"></i> Testar portas, cabos e permissões</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question mb-5">
+                    <p class="fw-bold fs-5 mb-3">5. Qual tecnologia te parece mais interessante?</p>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q5" value="frontend"> 
+                                <span class="card-content"><i class="bi bi-easel-fill"></i> HTML, CSS, React</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q5" value="backend"> 
+                                <span class="card-content"><i class="bi bi-puzzle-fill"></i> Python, Java, SQL</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q5" value="cloud"> 
+                                <span class="card-content"><i class="bi bi-globe-americas"></i> AWS, Docker, Kubernetes</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q5" value="infra"> 
+                                <span class="card-content"><i class="bi bi-tools"></i> Redes, Firewalls, Linux</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question mb-5">
+                    <p class="fw-bold fs-5 mb-3">6. Qual desafio te parece mais legal?</p>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q6" value="frontend"> 
+                                <span class="card-content"><i class="bi bi-vr"></i> Criar algo visual incrível</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q6" value="backend"> 
+                                <span class="card-content"><i class="bi bi-graph-up-arrow"></i> Melhorar performance do sistema</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q6" value="cloud"> 
+                                <span class="card-content"><i class="bi bi-rocket-fill"></i> Escalar uma aplicação</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q6" value="infra"> 
+                                <span class="card-content"><i class="bi bi-activity"></i> Manter tudo seguro e estável</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question mb-5">
+                    <p class="fw-bold fs-5 mb-3">7. Como você prefere aprender?</p>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q7" value="frontend"> 
+                                <span class="card-content"><i class="bi bi-person-wheelchair"></i> Criando interfaces</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q7" value="backend"> 
+                                <span class="card-content"><i class="bi bi-currency-dollar"></i> Resolvendo lógica</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q7" value="cloud"> 
+                                <span class="card-content"><i class="bi bi-lightbulb-fill"></i> Explorando serviços de nuvem</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <label class="selection-card">
+                                <input type="radio" name="q7" value="infra"> 
+                                <span class="card-content"><i class="bi bi-file-medical-fill"></i> Configurando equipamentos</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="question">
-      <p><b>5. Qual tecnologia te parece mais interessante?</b></p>
-      <label><input type="radio" name="q5" value="frontend"> HTML, CSS, React</label><br>
-      <label><input type="radio" name="q5" value="backend"> Python, Java, SQL</label><br>
-      <label><input type="radio" name="q5" value="cloud"> AWS, Docker, Kubernetes</label><br>
-      <label><input type="radio" name="q5" value="infra"> Redes, Firewalls, Linux</label>
-    </div>
 
-    <div class="question">
-      <p><b>6. Qual desafio te parece mais legal?</b></p>
-      <label><input type="radio" name="q6" value="frontend"> Criar algo visual incrível</label><br>
-      <label><input type="radio" name="q6" value="backend"> Melhorar performance do sistema</label><br>
-      <label><input type="radio" name="q6" value="cloud"> Escalar uma aplicação</label><br>
-      <label><input type="radio" name="q6" value="infra"> Manter tudo seguro e estável</label>
-    </div>
+                <div class="text-center mt-5">
+                    <button type="button" onclick="calcularResultado()" class="btn btn-lg btn-success shadow-sm">
+                        <i class="bi bi-arrow-right-circle-fill me-2"></i> Ver Minha Trilha Personalizada
+                    </button>
+                </div>
 
-    <div class="question">
-      <p><b>7. Como você prefere aprender?</b></p>
-      <label><input type="radio" name="q7" value="frontend"> Criando interfaces</label><br>
-      <label><input type="radio" name="q7" value="backend"> Resolvendo lógica</label><br>
-      <label><input type="radio" name="q7" value="cloud"> Explorando serviços de nuvem</label><br>
-      <label><input type="radio" name="q7" value="infra"> Configurando equipamentos</label>
-    </div>
-
-    <button type="button" onclick="calcularResultado()">Enviar Respostas</button>
-
-  </form>
-
-  <div id="resultado"></div>
-
-</div>
-
-<!-- LÓGICA DE PONTUAÇÃO -->
-<script>
-function calcularResultado() {
-  const respostas = new FormData(document.getElementById("quizForm"));
-
-  let pontuacao = {
-    frontend: 0,
-    backend: 0,
-    cloud: 0,
-    infra: 0
-  };
-
-  // Soma pontos
-  for (let [, valor] of respostas.entries()) {
-    pontuacao[valor]++;
-  }
-
-  // Área com maior pontuação
-  let areaFinal = Object.keys(pontuacao).reduce((a, b) =>
-    pontuacao[a] > pontuacao[b] ? a : b
-  );
-
-  let mensagem = {
-    frontend: "🎨 Você combina com FRONTEND! Criatividade, interfaces e UX são seu forte.",
-    backend: "🧠 Você combina com BACKEND! Lógica, performance e dados fazem sentido pra você.",
-    cloud: "☁️ Você combina com CLOUD! Automação, escalabilidade e arquitetura te atraem.",
-    infra: "🛠️ Você combina com INFRAESTRUTURA! Segurança, redes e estabilidade são sua praia."
-  };
-
-  document.getElementById("resultado").innerText = mensagem[areaFinal];
-}
-</script>
-
+            </form>
+        </div>
+    </main>
+    
+    <button class="btn btn-primary theme-toggle" id="theme-toggle-button" title="Alternar tema">
+        <i class="bi bi-moon-fill"></i>
+        <i class="bi bi-sun-fill"></i>
+    </button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/stacks-common.js"></script>
+    <script src="../js/quiz.js"></script> 
 </body>
 </html>

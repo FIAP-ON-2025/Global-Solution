@@ -20,135 +20,122 @@
 
     <div class="container-fluid p-0 d-flex">
 
+    <div class="main-content col-md-9 col-lg-9">
 
-        <nav class="sidebar-left col-md-3 col-lg-3 d-none d-md-block">
-            <h4>Seções do Documento</h4>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#secao1"> O Desafio da Automação</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#secao2"> Projeto & ODS 8</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#secao3"> Estrutura da Solução</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#secao4"> Diagnóstico (Quiz)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#secao5"> Trilhas de Desenvolvimento</a>
-                </li>
-            </ul>
-        </nav>
-
-
-        <div class="main-content col-md-9 col-lg-9">
-
-            <div class="caixa-simples">
-
-                <h2 id="secao1" class="titulo-2">1. O desafio da automação e a perda de empregabilidade</h2>
-
-                <p>O avanço exponencial de tecnologias como Inteligência Artificial (IA), Machine Learning e automação
-                    robótica está redefinindo o panorama global do emprego. Setores inteiros, tradicionalmente estáveis
-                    e baseados em tarefas repetitivas ou processuais, enfrentam um risco crescente de obsolescência e
-                    substituição tecnológica. A perda iminente de empregabilidade nessas áreas não é apenas um desafio
-                    econômico, mas uma crise social que ameaça desestabilizar a vida de milhões de profissionais. Sem
-                    intervenção proativa, as empresas enfrentarão um déficit de talentos em funções emergentes da área
-                    de tecnologia, enquanto uma parcela significativa de sua força de trabalho se tornará redundante,
-                    elevando as taxas de desemprego estrutural e aprofundando a desigualdade social.</p>
-
-                <h2 id="secao2" class="titulo-2">2. Projeto Guia de Stacks e o compromisso com a ODS 8</h2>
-
-                <p>Nosso projeto propõe uma solução estratégica e humanizada para este desafio, alinhada diretamente com
-                    o Objetivo de Desenvolvimento Sustentável (ODS) 8 da ONU: Promover o crescimento econômico
-                    sustentado, inclusivo e sustentável, emprego pleno e produtivo e trabalho decente para todos. O
-                    projeto visa garantir que a tecnologia seja uma força para a elevação, e não para a exclusão, da
-                    força de trabalho, focando no aproveitamento inteligente de talentos e na criação de um caminho
-                    claro para o "trabalho decente" na economia digital.</p>
-
-                <h2 id="secao3" class="titulo-2">Estrutura da Solução: O Ciclo de Redirecionamento</h2>
-
-                <p class="subtexto">A solução se estrutura em três pilares principais, pensados para profissionais já
-                    inseridos no mercado (e aqueles em busca de recolocação):</p>
-
-
-                <div class="caixa-info-vertical">
-                    <h3>Visão Geral e Metodologia</h3>
-                    <p>Esta seção destaca a importância do Redirecionamento 4.0, garantindo que a requalificação
-                        seja um processo contínuo e adaptativo, centrado nas necessidades do indivíduo e do mercado.</p>
-                </div>
-
-                <p id="secao4"><strong>A. Diagnóstico de Habilidades Transferíveis (O Quiz Vocacional)</strong></p>
-                <p>O ponto de partida é uma avaliação inovadora, similar a um teste vocacional, mas profundamente
-                    centrada nas habilidades e competências (hard e soft skills) já adquiridas pelo profissional em sua
-                    trajetória:
-                <ul>
-                    <li><strong>Foco:</strong> O quiz identifica a essência do conhecimento prático do indivíduo
-                        (ex:
-                        resolução de problemas, atendimento ao cliente, raciocínio lógico, experiência em processos)
-                        e
-                        mapeia sua transferibilidade para o setor de tecnologia.</li>
-                    <li><strong>Resultado:</strong> O resultado não aponta para uma "profissão ideal", mas sim para
-                        um
-                        perfil de transição baseado em competências atuais.</li>
+        <nav class="navbar navbar-expand-lg main-nav shadow-sm mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary" href="./index.html">
+                <i class="bi bi-gem me-2"> Guia de Stacks</i> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn btn-sm btn-quiz-nav px-3 py-1" href="./pages/quiz.html">
+                            <i class="fas fa-play-circle me-1"></i> Quiz Vocacional
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownStacks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trilhas de Carreira
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownStacks">
+                            <li><a class="dropdown-item" href="./pages/front-end.html"><i class="fas fa-laptop-code me-2"></i> Front-End</a></li>
+                            <li><a class="dropdown-item" href="./pages/back-end.html"><i class="fas fa-server me-2"></i> Back-End</a></li>
+                            <li><a class="dropdown-item" href="./pages/devops.html"><i class="fas fa-cogs me-2"></i> DevOps</a></li>
+                            <li><a class="dropdown-item" href="./pages/cloud-computing.html"><i class="fas fa-cloud me-2"></i> Cloud Computing</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </p>
-
-
-                <div class="text-center my-5">
-
-                    <button id="quiz-button" class="btn btn-lg btn-quiz" onclick="iniciarQuiz()">
-                        <i class="fas fa-play-circle me-2"></i> Iniciar Quiz Vocacional
-                    </button>
-                    <p id="quiz-message" class="mt-3 text-muted"></p>
-                </div>
-
-                <p id="secao5"><strong>B. Redirecionamento Personalizado e Capacitação Direcionada</strong></p>
-                <p>Com base no diagnóstico, o profissional recebe um plano de ação altamente personalizado:</p>
-                <ul>
-                    <li><strong>Sugestões de Formação:</strong> Recomendações de trilhas de aprendizado em áreas de alto
-                        crescimento tecnológico (ex: Análise de Dados, Desenvolvimento Low-Code, Cybersecurity,
-                        Gerenciamento de Projetos Ágeis), priorizando aquelas que exigem a menor curva de aprendizado a
-                        partir das habilidades existentes.</li>
-                    <li><strong>Plataformas de Capacitação:</strong> Indicação de cursos, bootcamps e plataformas de
-                        e-learning (gratuitas ou pagas) com histórico comprovado de sucesso na requalificação,
-                        oferecendo acesso a ferramentas essenciais para o upskilling.</li>
-                </ul>
-
-                <p id="secao6"><strong>C. Acompanhamento Contínuo e Garantia de Retenção</strong></p>
-                <p>Para empresas que investem em seus funcionários, o projeto oferece uma ferramenta de acompanhamento
-                    robusta:</p>
-                <ul>
-                    <li><strong>Monitoramento de Progresso:</strong> Os gestores podem acompanhar o engajamento e a
-                        conclusão dos módulos de capacitação de seus colaboradores.</li>
-                    <li><strong>Integração e Retenção:</strong> Este acompanhamento transforma a requalificação em uma
-                        estratégia de retenção de talentos.</li>
-                </ul>
-
-
-                <div class="text-center stack-buttons-container">
-                    <h3 class="mb-4 titulo-2">Escolha sua Trilha de Desenvolvimento</h3>
-
-                    <a href="./pages/front-end.html" class="btn-stack btn-frontend">
-                        <i class="fas fa-laptop-code me-2"></i> Front-End
-                    </a>
-
-                    <a href="./pages/back-end.html" class="btn-stack btn-backend">
-                        <i class="fas fa-server me-2"></i> Back-End
-                    </a>
-
-                    <a href="./pages/devops.html" class="btn-stack btn-devops">
-                        <i class="fas fa-cogs me-2"></i> DevOps
-                    </a>
-
-                    <a href="./pages/cloud-computing.html" class="btn-stack btn-cloud">
-                        <i class="fas fa-cloud me-2"></i> Cloud
-                    </a>
-                </div>
-
             </div>
+        </div>
+    </nav>
 
+        <div class="container-fluid"> 
+        <section id="secao1" class="my-5 py-4">
+            <h2 class="titulo-2 text-center">O Desafio da Automação e o Risco de Empregabilidade</h2>
+            <p class="lead text-center text-muted">
+                O avanço exponencial de tecnologias como Inteligência Artificial e automação está redefinindo o panorama global do emprego. Setores inteiros com tarefas repetitivas enfrentam um risco crescente de obsolescência e substituição tecnológica.
+            </p>
+        </section>
+
+        <section id="secao2" class="my-5 p-5 caixa-info-vertical text-center rounded-4">
+            <h3 class="fw-bold mb-3"><i class="bi bi-gem me-2"></i> Nosso Propósito: Alinhamento com a ODS 8</h3>
+            <p class="mb-0 fs-5">
+                Nosso projeto se alinha ao Objetivo de Desenvolvimento Sustentável (ODS) 8 da ONU, garantindo que a tecnologia seja uma força para a <strong>elevação</strong>, e não para a exclusão, da força de trabalho. O foco é no crescimento sustentado, inclusivo e na criação de um caminho claro para o "trabalho decente" na economia digital.
+            </p>
+        </section>
+
+        <section id="secao3" class="my-5 py-4">
+            <h2 class="titulo-2 text-center">Estrutura da Solução: O Ciclo de Redirecionamento</h2>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card h-100 p-3 card-feature shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-patch-check display-5 text-primary mb-3"></i>
+                            <h5 class="card-title fw-bold">1. Diagnóstico de Habilidades</h5>
+                            <p class="card-text text-muted">Avaliação inovadora focada em mapear suas <strong>Habilidades Transferíveis</strong> (hard e soft skills) de sua trajetória para o setor de tecnologia.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 p-3 card-feature shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-compass display-5 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">2. Redirecionamento Personalizado</h5>
+                            <p class="card-text text-muted">Plano de ação com sugestões de trilhas de aprendizado em áreas de alto crescimento, minimizando a curva de aprendizado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 p-3 card-feature shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-briefcase display-5 text-danger mb-3"></i>
+                            <h5 class="card-title fw-bold">3. Acompanhamento e Retenção</h5>
+                            <p class="card-text text-muted">Ferramenta robusta para gestores monitorarem o progresso, transformando a requalificação em estratégia de retenção de talentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao4" class="my-5 py-5 text-center quiz-cta-box">
+            <h2 class="titulo-2 border-0 mb-4 fw-bolder">Pronto para a Transição?</h2>
+            <p class="lead text-muted mb-4">Descubra qual área de tecnologia melhor se encaixa nas suas habilidades atuais e inicie sua trilha de requalificação. <br> É rápido e prático!</p>
+            
+            <button id="quiz-button" class="btn btn-lg btn-quiz" onclick="iniciarQuiz()">
+                <i class="fas fa-play-circle me-2"></i> Iniciar Quiz Vocacional
+            </button>
+            <p id="quiz-message" class="mt-3 text-muted"></p>
+        </section>
+
+        <section id="secao5" class="my-5 py-4 text-center stack-buttons-container">
+            <h2 class="titulo-2 text-center">Trilhas de Desenvolvimento</h2>
+            <p class="lead text-muted mb-4">Explore guias detalhados sobre as carreiras mais promissoras da área.</p>
+            
+            <a href="./pages/front-end.html" class="btn-stack btn-frontend">
+                <i class="fas fa-laptop-code me-2"></i> Front-End
+            </a>
+            <a href="./pages/back-end.html" class="btn-stack btn-backend">
+                <i class="fas fa-server me-2"></i> Back-End
+            </a>
+            <a href="./pages/devops.html" class="btn-stack btn-devops">
+                <i class="fas fa-cogs me-2"></i> DevOps
+            </a>
+            <a href="./pages/cloud-computing.html" class="btn-stack btn-cloud">
+                <i class="fas fa-cloud me-2"></i> Cloud
+            </a>
+        </section>
+
+        </div> 
         </div>
     </div>
 
@@ -167,21 +154,19 @@
     <script>
         function iniciarQuiz() {
             const messageElement = document.getElementById('quiz-message');
+            const button = document.getElementById('quiz-button');
 
-            messageElement.innerHTML =
-                '<span class="text-success fw-bold">Quiz iniciado! Você será redirecionado em breve.</span>';
-
+            button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Redirecionando...';
+            messageElement.innerHTML = '<span class="text-success fw-bold">Quiz iniciado! Você será redirecionado para a página do quiz.</span>';
 
             setTimeout(() => {
-                document.getElementById('quiz-button').disabled = true;
-                document.getElementById('quiz-button').textContent = 'Quiz Iniciado!';
-            }, 2000);
+                window.location.href = './pages/quiz.html'; 
+            }, 1500);
         }
     </script>
 
     <script src="./js/home.js"></script>
-
-
 
 </body>
 
